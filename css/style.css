@@ -1,0 +1,411 @@
+:root {
+    --blue-color: #0078FF;
+    --second-blue-color: #CDE1F8;
+    --p-color: #4e4e4e;
+}
+::selection {
+    background-color: var(--blue-color);
+    color: white;
+}
+body {
+    background-color: #F5F5F5;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+}
+h1,h2,h3,h4,h5,h6 {
+    color: #1E1E1E;
+}
+a {
+    text-decoration: none;
+    color: #1E1E1E;
+}
+ul {
+    list-style: none;
+}
+.centering {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-title h1 {
+    font-size: 3rem;
+}
+.main-title p {
+    color: #4e4e4e;
+    margin-bottom: 64px;
+}
+.main-title p::after {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 5px;
+    background-color: var(--blue-color);
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.sub-title {
+    position: relative;
+    font-size: 2rem;
+}
+.sub-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background-color: var(--blue-color);
+}
+/* Start Landing */
+main {
+    background-image: url("../img/hero-bg.jpg");
+    background-position: center;
+    background-size: cover;
+}
+main::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.50)
+}
+main h1 {
+    font-size: 3rem;
+}
+@media screen and (min-width:767px) {
+    main h1 {
+        font-size: 4.5rem;
+    }
+}
+main h4 {
+    color: white;
+    font-size: 25px;
+    font-weight: normal;
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+}
+main h4::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: white;
+    top: 0;
+    right: -12px;
+}
+.navbar .nav-item {
+    padding: 10px 0 10px 30px;
+}
+.navbar .nav-item .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: 0.3s;
+}
+.navbar .nav-item:hover .nav-link::before {
+    width: 90%;
+}
+.navbar .nav-item .active::before {
+    width: 90%;
+}
+.navbar .dropdown-menu {
+    border: 0;
+    border-radius: 0;
+    padding: 10px;
+    left: 30px;
+}
+.navbar .dropdown-menu li a {
+    background-color: transparent;
+    transition: 0.4s;
+}
+.navbar .dropdown-menu li a:hover {
+    color: var(--blue-color);
+}
+.navbar ul.dropdown-menu-nesting {
+    left: calc(-100% - 25px);
+    transition: 0.4s;
+    top: -5%;
+}
+.navbar .dropdown-nesting:hover ul.dropdown-menu-nesting {
+    display: block;
+    transition: 0.4s;
+}
+.navbar-toggler {
+    border: 0;
+}
+.navbar-toggler svg {
+    font-size: 24px;
+    color: white;
+}
+.navbar-toggler:focus {
+    box-shadow: none
+}
+@media screen and (max-width: 992px) {
+    /* .navbar-toggler:focus .bg-black {
+        background-color: #464646 !important;
+    } */
+    .navbar-nav {
+        background-color: white;
+    }
+    .navbar-nav a {
+        color: var(--p-color) !important;
+        transition: 0.4s;
+    }
+    .navbar-nav a:hover {
+        color: var(--blue-color) !important;
+    }
+}
+/* End Landing */
+/* Start About */
+.about .about-text .title {
+    font-size: 18px;
+}
+.about .progress {
+    height: 0.7rem;
+}
+/* End About */
+/* Start Service */
+.service .icon {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border: 10px solid var(--blue-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+.service svg {
+    font-size: 2rem;
+}
+.service .card:hover .icon {
+    border-color: var(--second-blue-color);
+    background-color: var(--blue-color);
+}
+.service .card:hover svg {
+    color: white;
+}
+/* End Service */
+/* Start Statistic */
+.statistic {
+    background-image: url("../img/counters-bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 8rem 0;
+}
+.statistic .icon {
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    border: 8px solid var(--second-blue-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 2rem;
+    padding: 28px;
+}
+/* End Statistic */
+/* Start Work */
+.work .modal {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.work .text span {
+    font-size: 0.8rem;
+}
+.work .text span:first-of-type {
+    color: var(--blue-color);
+}
+.work .icon {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--blue-color);
+    font-size: 30px;
+}
+.work .icon a {
+    color: var(--blue-color);
+}
+.work .card img {
+    transition: .8s;
+}
+.work .card:hover img {
+    transform: scale(1.2);
+}
+/* End Work */
+/* Start Team */
+.team {
+    background-image: url("../img/overlay-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.overlay-blue {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: rgb(0, 120, 255, 70%);
+}
+.team p {
+    font-size: 20px;
+}
+@media screen and (min-width: 768px) {
+    .team p {
+        padding: 0 5rem;
+    }
+}
+@media screen and (min-width: 992px) {
+    .team p {
+        padding: 0 8rem;
+    }
+}
+.team .carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+/* End Team */
+/* Start Blog */
+.blog .card .label {
+    top: -15px;
+    background: var(--blue-color);
+    padding: 8px 11px;
+    border-radius: 3px;
+}
+.blog .card .label h6 {
+    font-size: 11px;
+    color: white;
+    margin: 0;
+}
+.blog .card .text h4 a {
+    transition: 0.8s;
+}
+.blog .card .text h4 a:hover {
+    color: var(--blue-color);
+}
+.blog .card .text p {
+    color: var(--p-color);
+}
+.blog .card .card-footer a img {
+    width: 32px;
+    height: 32px;
+    margin-right: 4px;
+    overflow: hidden;
+}
+/* End Blog */
+/* Start contact */
+.contact {
+    background-image: url("../img/overlay-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1)
+}
+.contact form input,
+.contact form textarea {
+    padding: 10px 15px;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    border: 1px solid #DEE2E6;
+}
+.contact form input:focus,
+.contact form textarea:focus {
+    outline: none;
+}
+.contact form button {
+    border: 0;
+    padding: 10px 24px;
+    color: #fff;
+    background-color: var(--blue-color);
+    border-radius: 80px;
+    font-size: 1.2rem;
+    transition: 0.4s;
+}
+.contact form button:hover {
+    box-shadow: 0 0 0 4px var(--second-blue-color);
+    background-color: #3393ff;
+}
+.contact .second-side .info svg {
+    color: var(--blue-color);
+}
+.contact .socail-media ul li a {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    line-height: 1.6;
+    margin: 0 15px 0 0;
+    box-shadow: 0 0 0 3px var(--blue-color);
+    justify-content: center;
+    padding-top: 4px;
+    transition: 0.4s;
+}
+.contact .socail-media ul li a svg {
+    transition: 0.4s;
+}
+.contact .socail-media ul li a:hover {
+    box-shadow: 0 0 0 3px var(--second-blue-color);
+    background-color: var(--blue-color);
+}
+.contact .socail-media ul li a:hover svg {
+    color: white;
+}
+/* End contact */
+/* Start Footer */
+.footer {
+    background-color: #0062D3
+}
+/* End Footer */
+.scroll-up {
+    bottom: 18px;
+    right: 25px;
+    width: 40px;
+    height: 40px;
+    background: var(--blue-color);
+    color: white;
+    transition: 0.4s;
+}
+.scroll-up:hover {
+    background-color: #3393ff;
+}
+/* Start Animation */
+@keyframes deleteWord {
+    0% {
+        width: 95px;
+    }
+    50% {
+        width: 0;
+    }
+    100% {
+        width: 95px;
+    }
+}
+.desing {
+    display: inline-block;
+    width: 95px;
+    overflow: hidden;
+    vertical-align: middle;
+    animation: deleteWord 1.5s linear 1.5s infinite;
+}
+.developer {
+    display: inline-block;
+    width: 0px;
+    overflow: hidden;
+    vertical-align: middle;
+    animation: creatWord 1.5s  1.5s infinite;
+    display: none;
+}
+/* End Animation */
